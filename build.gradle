@@ -18,14 +18,19 @@ repositories {
 ext{
  commonsLang3Version = '3.8.1'
 }
-
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	compile "org.apache.commons:commons-lang3:${commonsLang3Version}"
-	compileOnly("org.springframework.boot:spring-boot-devtools")
+	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	
 	//for deploy war - providedRuntime "org.springframework.boot:spring-boot-starter-tomcat"
 }

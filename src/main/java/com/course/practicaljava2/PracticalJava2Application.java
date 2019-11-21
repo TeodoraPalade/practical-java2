@@ -13,6 +13,7 @@ public class PracticalJava2Application /* for deploy war - extends SpringBootSer
 
 	public static void main(String[] args) {
 		SpringApplication.run(PracticalJava2Application.class, args);
+		System.out.println("fgh");
 	}
 
 }

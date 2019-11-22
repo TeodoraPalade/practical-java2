@@ -1,3 +1,4 @@
+
 package com.course.practicaljava2.common;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import com.course.practicaljava2.rest.service.CarService;
 
 @Component
 public class CarElasticDataSource {
+
 	@Autowired
 	private CarElasticRepository carElasticRepository;
 

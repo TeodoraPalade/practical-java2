@@ -3,11 +3,7 @@ package com.course.practicaljava2.rest.domain;
 import java.util.Date;
 import java.util.List;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.elasticsearch.annotations.DateFormat;
 import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -16,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 //@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 @Document(indexName = "practical-java2", type = "car")
 public class Car {
-	@Id
+	// @Id
 	private String id;
 
 	private String brand;
@@ -28,7 +24,8 @@ public class Car {
 	private boolean available;
 
 	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ", timezone = "Asia/Jakarta")
-	@Field(type = FieldType.Date, format = DateFormat.date_time) // for elasticSearch to be mapped
+	// @Field(type = FieldType.Date, format = DateFormat.date_time) // for
+	// elasticSearch to be mapped
 	private Date firstReleaseDate;
 
 	@JsonInclude(value = Include.NON_EMPTY)

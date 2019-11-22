@@ -1,3 +1,4 @@
+
 package com.course.practicaljava2.common;
 
 import org.springframework.context.annotation.Bean;

@@ -1,3 +1,4 @@
+
 package com.course.practicaljava2.common;
 
 import java.net.InetAddress;
@@ -14,6 +15,7 @@ import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
 @Configuration
+
 @EnableElasticsearchRepositories(basePackages = { "com.course.practicaljava2.repository" })
 public class ElasticSearchConfig {
 

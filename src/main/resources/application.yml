@@ -1,3 +1,11 @@
 server:
-  port: 8001
-  
+   port: 8001
+spring:
+   jackson:
+      property-naming-strategy: SNAKE_CASE
+logging:
+  level:
+    root: ERROR
+    org.springframework.web: ERROR
+    com.howtodoinjava: DEBUG
+    org.hibernate: ERROR
